@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Auth from "./components/Auth";
+import Chat from "./components/Chat";
 
 function App() {
+  /**
+   * set to show and hide chat window and to show and hide modal text
+   */
+  const [showChat, setShowChat] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Auth setShowChat={setShowChat} />
+      {showChat && <Chat />}
+      {!showChat && (
+        <p className="modalText">Please Sign In to start chatting</p>
+      )}
     </div>
   );
 }

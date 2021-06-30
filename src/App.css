@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(15, 57, 92);
+  color: #fff;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.received {
+  background-color: #fff;
+  color: rgb(70, 70, 70);
+  padding: 10px 10px;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 5px;
+  border: 1px solid rgb(212, 109, 41);
+  margin-bottom: 30px;
+  margin-left: -70px;
+  font-style: italic;
+  max-width: 350px;
+  line-height: 1.2;
+}
+
+.sent {
+  background-color: rgb(191, 219, 235);
+  padding: 10px 10px;
+  color: rgb(70, 70, 70);
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 5px;
+  border: 1px solid rgb(212, 109, 41);
+  margin-bottom: 30px;
+  margin-right: -70px;
+  font-style: italic;
+  max-width: 350px;
+  line-height: 1.2;
+}
+
+.modalText {
+  margin-top: 15px;
 }
